@@ -1,5 +1,8 @@
 # m3-assignment4
 
+API Flowgraph
+![alt text](https://github.com/tonyblu331/hs-intro-vue-m3-assignment4/blob/master/KanyeAPI_Flow.drawio.png?raw=true)
+
 ## Project setup
 ```
 npm install

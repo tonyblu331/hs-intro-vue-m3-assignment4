@@ -1,8 +1,10 @@
 <template>
   <div class="container">
-    <div class="quote">
-      <i>"{{ quote }}"</i>
-    </div>
+    <suspense>
+      <div class="quote">
+        <i>"{{ quote }}"</i>
+      </div>
+    </suspense>
     <span id="author">- Kanye West</span>
     <span id="refresh"
       >Refresh for more wisdom from
@@ -16,7 +18,7 @@ import { ref } from "vue";
 import KanyeAPI from "./services/KanyeAPI";
 
 export default {
-  setup() {
+  async setup() {
     const quote = ref("");
 
     const loadQuote = async () => {
@@ -66,7 +68,7 @@ export default {
   justify-content: center;
   .quote {
     i {
-      font-size: 2rem;
+      font-size: 1.5rem;
       max-width: 40ch;
       text-align: center;
       justify-content: center;
@@ -83,7 +85,7 @@ export default {
     font-size: 12px;
   }
   #author {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .authorMr {
     font-weight: bold;
